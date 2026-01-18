@@ -13,10 +13,13 @@ const createApp = (): Application => {
 
     // CORS configuration
     app.use(cors({
-        origin: true, // Allow all origins during initial deployment test
+        origin: (origin, callback) => {
+            // Allow all origins in production for testing, or specific Vercel ones
+            callback(null, true);
+        },
         credentials: true,
         methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-        allowedHeaders: ['Content-Type', 'Authorization'],
+        allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
     }));
 
     // Request logging

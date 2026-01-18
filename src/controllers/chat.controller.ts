@@ -11,6 +11,15 @@ export class ChatController {
         try {
             const { message, conversationId, userId } = req.body;
 
+            // Debug: Check if API key exists in Vercel
+            if (!process.env.GROQ_API_KEY) {
+                res.status(500).json({
+                    success: false,
+                    message: 'BACKEND ERROR: GROQ_API_KEY is missing in Vercel Environment Variables. Please add it in Vercel Settings.',
+                });
+                return;
+            }
+
             if (!message || typeof message !== 'string' || message.trim() === '') {
                 res.status(400).json({
                     success: false,
