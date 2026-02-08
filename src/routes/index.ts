@@ -7,7 +7,7 @@ const router = Router();
 router.get('/health', (req, res) => {
     res.status(200).json({
         success: true,
-        message: 'AshrafAI API is running!',
+        message: 'Extrain Ai API is running!',
         timestamp: new Date().toISOString(),
     });
 });

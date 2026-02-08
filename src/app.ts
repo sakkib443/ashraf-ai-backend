@@ -43,7 +43,7 @@ const createApp = (): Application => {
     app.get('/', (req, res) => {
         res.json({
             success: true,
-            message: '🚀 Welcome to AshrafAI API',
+            message: '🚀 Welcome to Extrain Ai API',
             version: '1.0.0',
             docs: '/api/health',
         });

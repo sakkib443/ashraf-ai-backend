@@ -4,7 +4,7 @@ let isConnected = false;
 
 export const connectDatabase = async (): Promise<void> => {
     try {
-        const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/ashrafai';
+        const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/extrainai';
 
         // Set a shorter timeout for faster failure
         await mongoose.connect(mongoUri, {

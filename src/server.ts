@@ -21,7 +21,7 @@ const startServer = async (): Promise<void> => {
             console.log(`
 ╔═══════════════════════════════════════════════════════════╗
 ║                                                           ║
-║   🤖 AshrafAI Backend Server                              ║
+║   🤖 Extrain Ai Backend Server                            ║
 ║                                                           ║
 ║   ✅ Server is running on port ${PORT}                      ║
 ║   📍 Local: http://localhost:${PORT}                        ║
